@@ -1,36 +1,107 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌍 Climate Communication Platform
 
-## Getting Started
+**AI-Powered Climate Communication for Everyone**
 
-First, run the development server:
+> "Local climate facts → simple words → practical actions."
+
+A Next.js 15 web application that makes climate data accessible to everyone, regardless of literacy level or language background.
+
+## ✨ Features
+
+- **14 Indian Languages** - English + 13 regional languages
+- **4 Literacy Levels** - Child, Basic, Intermediate, Expert
+- **Real Climate Data** - CMIP6 projections via Open-Meteo
+- **AI Explanations** - Google Gemini 2.0 Flash
+- **Action Recommendations** - Practical, location-specific actions
+- **Voice Playback** - Multi-language TTS
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+- Node.js 18+
+- npm or yarn
+
+### Installation
 
 ```bash
+# Install dependencies
+npm install
+
+# Set up environment (.env.local)
+GEMINI_API_KEY=your_key_here
+NEXT_PUBLIC_APP_URL=http://localhost:3000
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+hack2/
+├── app/
+│   ├── api/           # API routes (climate, explain, actions, geocode)
+│   ├── dashboard/     # Main dashboard
+│   └── page.tsx       # Onboarding
+├── components/        # React components
+├── lib/              # Services (climate, gemini, actions, TTS)
+└── public/           # Static assets
+```
 
-## Learn More
+## 🌐 User Journey
 
-To learn more about Next.js, take a look at the following resources:
+1. **Onboarding** → Select language & literacy level
+2. **Location** → Auto-detect or search city
+3. **Data** → Fetch climate projections
+4. **Results** → AI explanation + Actions + Voice
+5. **Action** → Take practical steps
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🔧 Tech Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Framework:** Next.js 15 + React 19
+- **LLM:** Google Gemini 2.0 Flash
+- **Climate API:** Open-Meteo (CMIP6)
+- **TTS:** Web Speech API
+- **Styling:** TailwindCSS 4
+- **Deployment:** Vercel
 
-## Deploy on Vercel
+## 🌍 Supported Languages
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+English, Hindi, Tamil, Telugu, Bengali, Marathi, Gujarati, Kannada, Malayalam, Punjabi, Odia, Assamese, Urdu, Sanskrit
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📊 API Endpoints
+
+- `POST /api/climate` - Fetch climate data
+- `POST /api/explain` - Get LLM explanation
+- `POST /api/actions` - Generate recommendations
+- `GET /api/geocode` - Search locations
+
+## 🚀 Deploy on Vercel
+
+1. Push to GitHub
+2. Import to Vercel
+3. Add `GEMINI_API_KEY` environment variable
+4. Deploy!
+
+## 🎓 For Hackathon Demo
+
+**Key Points:**
+
+- Real CMIP6 climate projections
+- Latest tech (Next.js 15, Gemini 2.0 Flash)
+- 14 languages, 4 literacy levels
+- Practical actions, not just information
+- 100% free tier services
+
+**Demo Cities:** Chennai, Coimbatore, Madurai
+
+## 📄 License
+
+MIT License
+
+---
+
+**Built for Hackathon 2025** | 🌍 Making climate communication accessible to everyone
